@@ -97,14 +97,14 @@ int menu ()
 		trNotlari[i]=rand()%101;
 	}
 	
-	int fizikDevam=rand()%21;
+	int fizikDevam=rand()%21;//random devamsýzlýk tanýmlama
 	int calculusDevam=rand()%21;
 	int introDevam=rand()%21;
 	int ictDevam=rand()%21;
 	int labDevam=rand()%21;
 	int ingDevam=rand()%21;
 
-	int bursMiktari=rand()%3;
+	int bursMiktari=rand()%3;//random burs miktarý tanýmlama
 
 	ANAMENU:
 	system("cls");
@@ -112,15 +112,15 @@ int menu ()
 	printf("Giris yapmak istediginiz bolumun numarasini tuslayin : ");
 	scanf("%d",&menuGiris);
 	
-	if(menuGiris==1)
-	{
+	if(menuGiris==1)//ana menüde notlar bölümü
+	{//if baþý
 		NOTLAR:
 		system("cls");
 		printf("BEYOZ UNIVERSITESI OGRENCI SISTEMINE HOS GELDINIZ\n\n\t\t1-FIZIK\n\n\t\t2-DIFERANSIYEL VE INTEGRAL HESABI\n\n\t\t3-PROGRAMLAMAYA GIRIS\n\n\t\t4-BILGI VE ILETISIM TEKNOLOJILERI\n\n\t\t5-FIZIK LABORATUVARI\n\n\t\t6-INGILIZCE\n\n\t\t7-TURK DILI\n\n");
 		printf("Notlarinizi gormek istediginiz dersin numarasini tuslayin : ");
 		scanf("%d",&dersGiris);
 		
-		if(dersGiris==1)
+		if(dersGiris==1)//fizik dersi notlarý bölümü
 		{
 			system("cls");
 			printf("|---------------FIZIK NOTLARINIZ---------------|\n\n");
@@ -145,7 +145,7 @@ int menu ()
 			if(donus==2)
 			goto ANAMENU;
 		}
-		else if(dersGiris==2)
+		else if(dersGiris==2)//kalkülüs dersi notlarý bölümü
 		{
 			system("cls");
 			printf("|----------DIFERANSIYEL VE INTEGRAL HESABI NOTLARINIZ----------|\n\n");
@@ -170,7 +170,7 @@ int menu ()
 			if(donus==2)
 			goto ANAMENU;
 		}
-		else if(dersGiris==3)
+		else if(dersGiris==3)//programlamaya giriþ dersi notlarý bölümü
 		{
 			system("cls");
 			printf("|----------PROGRAMLAMAYA GIRIS NOTLARINIZ----------|\n\n");
@@ -195,7 +195,7 @@ int menu ()
 			if(donus==2)
 			goto ANAMENU;
 		}
-		else if(dersGiris==4)
+		else if(dersGiris==4)//bilgi ve iletiþim teknolojileri dersi notlarý bölümü
 		{
 			system("cls");
 			printf("|----------BILGI VE ILETISIM TEKNOLOJILERI NOTLARINIZ----------|\n\n");
@@ -219,7 +219,7 @@ int menu ()
 			if(donus==2)
 			goto ANAMENU;
 		}
-		else if(dersGiris==5)
+		else if(dersGiris==5)//fizik laboratuvarý dersi notlarý bölümü
 		{
 			system("cls");
 			printf("|---------------FIZIK LABORATUVARI NOTLARINIZ---------------|\n\n");
@@ -243,7 +243,7 @@ int menu ()
 			if(donus==2)
 			goto ANAMENU;
 		}
-		else if(dersGiris==6)
+		else if(dersGiris==6)//ingilizce dersi notlarý bölümü
 		{
 			system("cls");
 			printf("|---------------INGILIZCE NOTLARINIZ---------------|\n\n");
@@ -267,7 +267,7 @@ int menu ()
 			if(donus==2)
 			goto ANAMENU;
 		}
-		else if(dersGiris==7)
+		else if(dersGiris==7)//türk dili dersi notlarý bölümü
 		{
 			system("cls");
 			printf("|---------------TURK DILI NOTLARINIZ---------------|\n\n");
@@ -297,9 +297,9 @@ int menu ()
 			int dersGiris=0;
 			goto NOTLAR;
 		}
-	}
-	else if(menuGiris==2)
-	{	
+	}//if sonu
+	else if(menuGiris==2)//ana menüde devamsýzlýk bölümü
+	{//else if baþý	
 		system("cls");
 		printf("\tBEYOZ UNIVERSITESI OGRENCI SISTEMINE HOS GELDINIZ");
 		printf("\n\n\t\tDERS\t\t\t\t\tDEVAMSIZLIK DURUMU");
@@ -315,9 +315,9 @@ int menu ()
 		scanf("%d",&donus);
 		if(donus==1)
 			goto ANAMENU;
-	}
-	else if(menuGiris==3)
-	{		
+	}//else if sonu
+	else if(menuGiris==3)//ana menü ücretlendirme bölümü
+	{//else if baþý
 		system("cls");
 		printf("\n\n|----------%s %s ait ucretlendirme bilgileri----------|\n\n" , &isim[girilenNo] , &soyisim[girilenNo]);
 		
@@ -333,7 +333,7 @@ int menu ()
 		if(donus==1)
 			goto ANAMENU;
 		
-	}
+	}//else if sonu
 	else
 	{
 		printf("Hatali Giris Yaptiniz.(Girmek istediginiz bolumun basindaki numarayi giriniz.)");
@@ -341,11 +341,11 @@ int menu ()
 		goto ANAMENU;
 	
 	}
-}
+}//ana menü fonksiyonu sonu
 
 
 int harfNotu(float x)
-{
+{//harf notu fonksiyonu baþý
 	if(x<=35)
 	{
 		printf("\t\tHARF NOTUNUZ : FF");
@@ -383,4 +383,4 @@ int harfNotu(float x)
 	{
 		printf("\t\tHARF NOTUNUZ : AA");
 	}
-}
+}//harf notu fonksiyonu baþý
